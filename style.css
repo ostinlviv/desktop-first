@@ -177,6 +177,6 @@ footer {
         width: 60%;
     }
     .text,.title, .content > .text {
-        min-width: 200px;
+        min-width: 0;
     }
 }
