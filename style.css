@@ -8,20 +8,19 @@ header {
 .header {
     display: flex;
     justify-content: space-between;
-
     max-width: 1240px;
     margin: 0 auto;
     align-items: center;
 }
 .logo {
     min-height: 100px;
-    width: 300px;
+    width: 25%;
     background-color: #009bdd;
     margin: 40px 0;
 }
 .menu {
     min-height: 100px;
-    width: 300px;
+    width: 25%;
     background-color: #36c3ff;
     margin: 20px 0;
 }
@@ -51,27 +50,30 @@ header {
 .wrapper {
     display: flex;
     width: 100%;
-    height: 380px;
     flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: -10px;
 }
 .img {
-    width: 400px;
-    height: 380px;
+    width: 40%;
+    height: 370px;
     background-color: #ffbd00;
 }
+.right {
+    width: 50%;
+    box-sizing: border-box;
+}
 .title {
-    min-width: 300px;
+
     margin-bottom: 20px;
     background-color: #9d9d9d;
     height: 60px;
     box-sizing: border-box;
 }
 .text {
-    min-width: 300px;
     background-color: #cecece;
     height: 50px;
-    margin: 5px 0;
+    margin: 10px 0;
     box-sizing: border-box;
 }
 footer {
@@ -105,30 +107,7 @@ footer {
         margin-right: 20px;
     }
 }
-@media screen and (max-width: 960px) {
-    .wrapper {
-        flex-wrap: nowrap;
-        height: auto;
-    }
-
-    .img {
-        margin-bottom: 20px;
-        margin-right: 20px;
-    }
-
-    .footer {
-        flex-wrap: wrap;
-    }
-
-    .footer-item {
-        width: 300px;
-    }
-
-    .footer-del {
-        display: none;
-    }
-}
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 375px) {
     .header {
         flex-wrap: wrap;
     }
@@ -161,14 +140,25 @@ footer {
         width: 100%;
         margin: 0;
     }
+    .right {
+        width: 100%;
+    }
     .img {
         width: 100%;
+        margin-right: 0;
     }
     .text,.title, .content > .text {
         margin-left: 20px;
     }
-}
-@media screen and (max-width: 640px) {
+    .title {
+        margin-top: 20px;
+    }
+    .footer {
+        flex-wrap: wrap;
+    }
+    .footer-del {
+        display: none;
+    }
     .footer-item {
         width: 100%;
         margin: 20px;
@@ -176,7 +166,5 @@ footer {
     .footer-subitem {
         width: 60%;
     }
-    .text,.title, .content > .text {
-        min-width: 0;
-    }
 }
+
